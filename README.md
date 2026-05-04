@@ -1,9 +1,12 @@
 ---
 # Dynamic Branch and Bound Tree Visualizer
 
+<img width="4582" height="760" alt="example_final_tree" src="https://github.com/user-attachments/assets/80d9a6c0-71cc-40eb-a2bd-8940b058f37d" />
+
 A Python utility for generating incremental, publication-quality visualizations of **Branch and Bound** search trees. This tool calculates optimal tree layouts and generates step-by-step frames showing the evolution of the optimization process, including node status changes (e.g., fractional, pruned, incumbent).
 
 ### ✨ Features
+
 *   **Auto-Layout Engine:** Automatically calculates horizontal and vertical spacing based on text length to prevent overlapping nodes.
 *   **Incremental Reveal:** Generates a sequence of images representing the "steps" of the algorithm.
 *   **Status Tracking:** Nodes change colors based on their state (Root, Fractional, Incumbent, Pruned, Infeasible) at each specific step.
@@ -16,7 +19,7 @@ The layout engine uses a **non-local coordinate assignment**:
 
 ### How to use?
 
-from bnbvisual import generate_tree_layout, draw_bnb_incremental
+The code follows the following structure. Refer to [this file](https://raw.githubusercontent.com/parinchaipunya/bnb-tree-visualization/refs/heads/main/example.py) for a complete example.
 ```python
 from bnbvisual import generate_tree_layout, draw_bnb_incremental
 
