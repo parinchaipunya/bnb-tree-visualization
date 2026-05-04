@@ -1,9 +1,10 @@
 ---
 # Dynamic Branch and Bound Tree Visualizer
 
-<img width="9872" height="1691" alt="bnb_massive_depth_11" src="https://github.com/user-attachments/assets/1d78119a-260c-4ee7-9291-8c3904ff3a30" />
+
 <img width="3356" height="1277" alt="bnb_ex4_11" src="https://github.com/user-attachments/assets/9f1b3285-e18c-420b-8429-d39ada3ac041" />
 
+<img width="9872" height="1691" alt="bnb_massive_depth_11" src="https://github.com/user-attachments/assets/1d78119a-260c-4ee7-9291-8c3904ff3a30" />
 
 
 A Python utility for generating incremental, publication-quality visualizations of **Branch and Bound** search trees. This tool calculates optimal tree layouts and generates step-by-step frames showing the evolution of the optimization process, including node status changes (e.g., fractional, pruned, incumbent).
