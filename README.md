@@ -18,6 +18,8 @@ The layout engine uses a **non-local coordinate assignment**:
 
 from bnbvisual import generate_tree_layout, draw_bnb_incremental
 ```python
+from bnbvisual import generate_tree_layout, draw_bnb_incremental
+
 # ... define your nodes and edges ...
 
 # Calculate layout and dynamic canvas width
