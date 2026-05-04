@@ -1,11 +1,12 @@
 ---
 # Dynamic Branch and Bound Tree Visualizer
 
-<img width="4582" height="760" alt="example_final_tree" src="https://github.com/user-attachments/assets/80d9a6c0-71cc-40eb-a2bd-8940b058f37d" />
+<img width="4582" height="760" alt="example_final_tree" src="https://github.com/user-attachments/assets/422a1691-1e45-48dc-8910-c7cc3e29d48b" />
+
 
 A Python utility for generating incremental, publication-quality visualizations of **Branch and Bound** search trees. This tool calculates optimal tree layouts and generates step-by-step frames showing the evolution of the optimization process, including node status changes (e.g., fractional, pruned, incumbent).
 
-### ✨ Features
+### Features
 
 *   **Auto-Layout Engine:** Automatically calculates horizontal and vertical spacing based on text length to prevent overlapping nodes.
 *   **Incremental Reveal:** Generates a sequence of images representing the "steps" of the algorithm.
@@ -18,17 +19,4 @@ The layout engine uses a **non-local coordinate assignment**:
 2. Parent nodes are then positioned at the **mean $x$** of their children, creating a clean, symmetrical branching aesthetic.
 
 ### How to use?
-
-The code follows the following structure. Refer to [this file](https://raw.githubusercontent.com/parinchaipunya/bnb-tree-visualization/refs/heads/main/example.py) for a complete example.
-```python
-from bnbvisual import generate_tree_layout, draw_bnb_incremental
-
-# ... define your nodes and edges ...
-
-# Calculate layout and dynamic canvas width
-nodes, tree_width = generate_tree_layout(raw_nodes, edges)
-canvas_width = max(10, tree_width * 1.05) 
-
-# Generate the visualization
-draw_bnb_incremental(nodes, edges, reveal_sequence, "output_prefix", figsize=(canvas_width, 8))
-```
+Refer to [this file](https://raw.githubusercontent.com/parinchaipunya/bnb-tree-visualization/refs/heads/main/example_deep.py) and [this file](https://raw.githubusercontent.com/parinchaipunya/bnb-tree-visualization/refs/heads/main/example_wide.py) for pretty complete examples.
