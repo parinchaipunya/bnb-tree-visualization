@@ -18,7 +18,7 @@ raw_nodes = {
     1_2_2_1: ("Node 1-2-2-1", -22, (0, 1, 1, 0), {9: "pruned"}),
     1_2_2_2: ("Node 1-2-2-2", "N/A", None, {9: "infeasible"}),
     2_2_1_1: ("Node 2-2-1-1", "N/A", None, {9: "infeasible"}),
-    2_2_1_2: ("Node 2-2-1-2", "N/A", None, {9: "infeasible"})
+    2_2_1_2: ("Node 2-2-1-2", "N/A", None, {9: "infeasible"}),
 }
 
 # Define edges
@@ -30,12 +30,11 @@ edges = [
     (2_1, 2_1_1, r"$x_{2} = 0$"), (2_1, 2_1_2, r"$x_{2} = 1$"),
     (2_2, 2_2_1, r"$x_{4} = 0$"), (2_2, 2_2_2, r"$x_{4} = 1$"),
     (1_2_2, 1_2_2_1, r"$x_{4} = 0$"), (1_2_2, 1_2_2_2, r"$x_{4} = 1$"),
-    (2_2_1, 2_2_1_1, r"$x_{2} = 0$"), (2_2_1, 2_2_1_2, r"$x_{2} = 1$")
+    (2_2_1, 2_2_1_1, r"$x_{2} = 0$"), (2_2_1, 2_2_1_2, r"$x_{2} = 1$"),
 ]
 
 # Generate layout from nodes and edges
-nodes, tree_width = generate_tree_layout(raw_nodes, edges)
-canvas_width = max(10, tree_width * 1.05) 
+nodes = generate_tree_layout(raw_nodes, edges)
 
 # Define the node revealing sequence
 reveal_sequence = [
@@ -49,14 +48,9 @@ reveal_sequence = [
     [2_1_2],
     [2_2_1, 2_2_2],
     [1_2_2_1, 1_2_2_2],
-    [2_2_1_1, 2_2_1_2]
+    [2_2_1_1, 2_2_1_2],
 ]
 
-# Draw the tree incrementally
-draw_bnb_incremental(
-    all_nodes=nodes, 
-    all_edges=edges, 
-    reveal_order=reveal_sequence, 
-    filename="bnb_ex4",
-    figsize=(canvas_width, 8)
-)
+# Draw!
+draw_bnb_incremental(nodes, edges, reveal_sequence, filename="bnb_ex4", showplt=False)
+
